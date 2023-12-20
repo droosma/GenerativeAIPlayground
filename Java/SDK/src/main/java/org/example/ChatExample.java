@@ -1,22 +1,16 @@
 package org.example;
 
 import com.azure.ai.openai.OpenAIAsyncClient;
-import com.azure.ai.openai.models.ChatChoice;
-import com.azure.ai.openai.models.ChatCompletions;
-import com.azure.ai.openai.models.ChatCompletionsOptions;
-import com.azure.ai.openai.models.ChatRequestAssistantMessage;
-import com.azure.ai.openai.models.ChatRequestMessage;
-import com.azure.ai.openai.models.ChatRequestSystemMessage;
-import com.azure.ai.openai.models.ChatRequestUserMessage;
-import com.azure.ai.openai.models.ChatResponseMessage;
+import com.azure.ai.openai.models.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SDK {
+public class ChatExample {
     private final OpenAIAsyncClient openAIAsyncClient;
     private final String deployment;
 
-    public SDK(OpenAIAsyncClient client, String deployment) {
+    public ChatExample(OpenAIAsyncClient client, String deployment) {
         this.openAIAsyncClient = client;
         this.deployment = deployment;
     }
