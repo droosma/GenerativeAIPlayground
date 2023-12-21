@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("application")
 }
 
 group = "org.example"
@@ -17,4 +18,8 @@ dependencies {
     }
 
     implementation("org.slf4j:slf4j-nop:2.0.9")
+}
+
+application {
+    mainClass.set("org.example.Main")
 }

@@ -27,7 +27,7 @@ public class AzureSearchExample {
     private List<Float> getEmbedding(String input){
         EmbeddingsOptions embeddingsOptions = new EmbeddingsOptions(Collections.singletonList(input));
         Embeddings result = client.getEmbeddings("text-embedding-ada-002", embeddingsOptions).block();
-        List<Double> embeddingList = result.getData().getFirst().getEmbedding();
+        List<Double> embeddingList = result.getData().get(0).getEmbedding();
 
         List<Float> floatList = new ArrayList<>();
         for (Double d : embeddingList) {
